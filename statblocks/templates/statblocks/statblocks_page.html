@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{%extends 'layout.html'%}
+
+{%block title%}
+    {{statblock.name}}
+{%endblock%}
+
+{%block content%}
+    <section>
+        <h1>
+        {{statblock.name}}
+        </h1>
+        <p>{{statblock.description}}</p>
+        <p>
+            Sp: {{statblock.Sp}} | 
+            WS: {{statblock.WS}} | 
+            BS: {{statblock.BS}} | 
+            S: {{statblock.S}} | 
+            T: {{statblock.T}} | 
+            I: {{statblock.I}} | 
+            Ag: {{statblock.Ag}} | 
+            Dex: {{statblock.Dex}} | 
+            Int: {{statblock.Int}} | 
+            WP: {{statblock.WP}} | 
+            Fel: {{statblock.Fel}} | 
+            HP: {{statblock.HP}} | 
+        </p>
+    
+        <h2>Traits:</h2>
+        {% for trait in statblock.Traits.all %}
+        <article class="temp-traits">
+            <h2>{{trait.name}}</h2>
+            <p>{{trait.description}}</p>
+         </article>
+        {% endfor %}
+    </section>
+{%endblock%}
+

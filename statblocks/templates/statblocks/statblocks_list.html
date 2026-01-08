@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{%extends 'layout.html'%}
+{%block title%}
+    Statblocks
+{%endblock%}
+
+{%block content%}
+<section>
+    <h1>
+        Statblocks
+    </h1>
+
+    {% for statblock in statblocks %}
+    <article class="temp-statblock">
+        <h2>
+            <a href="{% url 'statblocks:page' slug=statblock.slug %}">
+                {{statblock.name}}
+            </a>
+        </h2>
+        <p>{{statblock.description}}</p>
+    </article>
+    {% endfor %}
+
+</section>
+{%endblock%}
+

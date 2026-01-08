@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{%extends 'layout.html'%}
+{%block title%}
+    Traits
+{%endblock%}
+
+{%block content%}
+<section>
+    <h1>
+        Traits
+    </h1>
+
+    {% for trait in traits %}
+    <article class="temp-trait">
+        <h2>
+            {{trait.name}}
+        </h2>
+        <p>{{trait.description}}</p>
+    </article>
+    {% endfor %}
+
+</section>
+{%endblock%}
+
