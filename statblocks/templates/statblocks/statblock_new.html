@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{%extends 'layout.html'%}
+
+{%block title%}
+    New Statblock
+{%endblock%}
+
+{%block content%}
+<section>
+    <h1>New Statblock</h1>
+    <form class="form-with-validation" action="{%url 'statblocks:new-statblock'%}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+        <button class="form-submit">
+            Create
+        </button>
+    </form>
+</section>
+{%endblock%}
+

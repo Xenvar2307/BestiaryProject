@@ -1,5 +1,6 @@
 from django.db import models
 from django.forms.models import model_to_dict
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Trait(models.Model):
@@ -10,10 +11,15 @@ class Trait(models.Model):
         return self.name
 
 class Statblock(models.Model):
-    #image?
+
     name = models.CharField(max_length=50)
+
+    art = models.ImageField(default='placeholder.png', blank=True)
+
     description = models.TextField()
     slug = models.SlugField()
+
+    author = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
 
     Sp = models.PositiveSmallIntegerField(default=4)
     WS = models.PositiveSmallIntegerField(default=30)

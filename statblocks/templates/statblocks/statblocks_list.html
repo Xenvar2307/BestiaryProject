@@ -16,6 +16,7 @@
             <a href="{% url 'statblocks:page' slug=statblock.slug %}">
                 {{statblock.name}}
             </a>
+            <p> by {{statblock.author}} </p>
         </h2>
         <p>{{statblock.description}}</p>
     </article>
