@@ -9,4 +9,6 @@ urlpatterns = [
     path('<slug:slug>', views.statblock_page, name='page'),
 
     path("/traits_list", views.traits_list, name='traits_list'),
+    path("/search_traits_list", views.search_traits_list, name='search_traits_list'),
+
 ]

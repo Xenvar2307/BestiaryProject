@@ -9,13 +9,15 @@
     <h1>
         Traits
     </h1>
-
     <form class="d-flex" method='POST' action="{% url 'statblocks:search_traits_list'%}">
         {% csrf_token %}
         <input type="search" placeholder="Search" name='searched_trait'>
         <button>Search</button>
     </form>
-
+    {% if  searched %}
+        <h1>Results for "{{searched}}"</h1>
+    {% endif %}
+    
     {% for trait in traits %}
     <article class="temp-trait">
         <h2>

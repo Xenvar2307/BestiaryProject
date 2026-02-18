@@ -10,6 +10,20 @@
         Statblocks
     </h1>
 
+    <form class="d-flex" method='POST' action="{% url 'statblocks:list'%}">
+        {% csrf_token %}
+        <input type="search" placeholder="Search words" name='searched_word'>
+        <input type="search" placeholder="Search author" name='searched_author'>
+        <button>Search</button>
+    </form>
+    {% if  searched_word %}
+        <h1>Results for "{{searched_word}}"</h1>
+    {% endif %}
+    {% if  searched_author %}
+        <h1>Made by "{{searched_author}}"</h1>
+    {% endif %}
+    
+
     {% for statblock in statblocks %}
     <article class="temp-statblock">
         <h2>
