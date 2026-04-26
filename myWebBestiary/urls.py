@@ -30,6 +30,8 @@ urlpatterns = [
     #my apps
     path("polls/", include("polls.urls")),
     path("statblocks/", include("statblocks.urls")),
+    path("vaesen/", include("vaesen.urls")),
+
     #admin
     path('admin/', admin.site.urls),
     # users

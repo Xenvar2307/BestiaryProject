@@ -18,7 +18,9 @@
         <a href="/about">About</a> | 
         <a href="{% url 'statblocks:list' %}">Statblocks</a> | 
         <a href="{% url 'statblocks:traits_list' %}">Traits</a> |
-        <a href="{% url 'statblocks:new-statblock' %}">Create New Statblock</a> |
+        <a href="{% url 'statblocks:new-statblock' %}">Create New Statblock</a>  |
+        <a href="{% url 'vaesen:home' %}">Vaesen</a>
+|
 
         <div class="topnav-right">
         {% if user.is_authenticated %}

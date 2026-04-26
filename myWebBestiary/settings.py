@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'django_extensions',
     "statblocks",
     "users",
+    "vaesen",
     "polls.apps.PollsConfig",
     'django.contrib.admin',
     'django.contrib.auth',

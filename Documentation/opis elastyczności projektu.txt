@@ -1,2 +1,0 @@
-
-Użyte wzorce: Template View
